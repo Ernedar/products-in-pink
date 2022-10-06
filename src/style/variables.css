@@ -1,0 +1,25 @@
+html {
+
+	/* ANIMATION */
+	--menu-slide-time: 500ms;
+
+	/* PAGE SETTINGS */
+
+	--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+	--background-color: var(--color-white-lightest);
+	--text-light: var(--color-white-lightest); /* fallback */
+	--text-dark: var(--color-black-darkest); /* fallback */
+	--font-size-max: 16px;
+	--font-size-min: 12px;
+	--max-width: 82.5rem; /* 1320px on 16px per 1rem */
+
+	/* COMPONENT INJECTION */
+
+	--base-padding: 1rem;
+
+	/* COMPONENT SETTINGS VARIABLES */
+	--star-dim: var(--font-md);
+	--star-spacing: 3px;
+}
+
+/* COLOR SCHEMES */

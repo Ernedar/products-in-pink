@@ -1,0 +1,65 @@
+html {
+
+	/* FONT SETTINGS */
+
+	--font-xxl: 2.0273rem;
+	--font-xl: 1.8020rem;
+	--font-lg: 1.6018rem;
+	--font-md: 1.4238rem;
+	--font-sm: 1.2656rem;
+	--font-xs: 1.1250rem;
+
+	--line-height-xxl: 1.650;
+	--line-height-xl: 1.4875;
+	--line-height-lg: 1.4875;
+	--line-height-md: 1.375;
+	--line-height-sm: 1.375;
+	--line-height-xs: 1.250;
+}
+
+/* FONT SETTINGS */
+
+h1, .h1 {
+	font-size: var(--font-xxl);
+	line-height: var(--line-height-xxl);
+}
+
+h2, .h2 {
+	font-size: var(--font-xl);
+	line-height: var(--line-height-xl);
+}
+
+h3, .h3 {
+	font-size: var(--font-lg);
+	line-height: var(--line-height-lg);
+}
+
+h4, .h4 {
+	font-size: var(--font-md);
+	line-height: var(--line-height-md);
+}
+
+h5, .h5 {
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+}
+
+h6, .h6 {
+	font-size: var(--font-xs);
+	line-height: var(--line-height-xs);
+}
+
+p {
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+}
+
+a:hover {
+}

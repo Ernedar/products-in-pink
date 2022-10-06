@@ -1,0 +1,19 @@
+.free-goodie-list {
+	list-style: none;
+	margin-left: 0;
+}
+
+.free-goodie-list li {
+	font-size: 0.85rem;
+	line-height: 1rem;
+	color: var(--color-black-dark);
+}
+
+.free-goodie-list li:before {
+	content: var(--content);
+	color: var(--list-bullet-color);
+	font-size: 0.85rem;
+	line-height: 1rem;
+	margin-right: 5px;
+	text-transform: uppercase;
+}

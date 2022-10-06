@@ -1,0 +1,24 @@
+html {
+
+	/* COLOR TINTS */
+
+	--color-black-pure: #000000;
+	--color-black-darkest: #080808;
+	--color-black-dark: #404040;
+	--color-black-middle: #696969;
+	--color-black-light: #909090;
+	--color-white-middle: #B0B0B0;
+	--color-white-light: #D3D3D3;
+	--color-white-lightish: #DCDCDC;
+	--color-white-lighter: #EBEBEB;
+	--color-white-lightest: #F7F7F7;
+	--color-white-pure: #FFFFFF;
+
+	/* STAR CHART COMPONENT */
+	--star-color: #FFCC00;
+	--star-bg: var(--color-white-lightest);
+
+	/* FREE GOODIES */
+
+	--list-bullet-color: #EF0000;
+}
