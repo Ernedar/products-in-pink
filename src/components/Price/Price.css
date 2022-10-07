@@ -1,0 +1,22 @@
+.price-group {
+	display: inline-block;
+	padding: 0;
+}
+
+.current-price {
+	display: block;
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+	font-weight: 700;
+	color: var(--color-price-current);
+	white-space: nowrap;
+}
+
+.original-price {
+	display: block;
+	text-decoration: line-through;
+	font-size: 0.95rem;
+	line-height: var(--line-height-xs);
+	color: var(--color-price-original);
+	white-space: nowrap;
+}

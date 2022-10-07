@@ -22,31 +22,37 @@ html {
 h1, .h1 {
 	font-size: var(--font-xxl);
 	line-height: var(--line-height-xxl);
+	color: var(--color-heading-1);
 }
 
 h2, .h2 {
 	font-size: var(--font-xl);
 	line-height: var(--line-height-xl);
+	color: var(--color-heading-2);
 }
 
 h3, .h3 {
 	font-size: var(--font-lg);
 	line-height: var(--line-height-lg);
+	color: var(--color-heading-3);
 }
 
 h4, .h4 {
 	font-size: var(--font-md);
 	line-height: var(--line-height-md);
+	color: var(--color-heading-4);
 }
 
 h5, .h5 {
 	font-size: var(--font-sm);
 	line-height: var(--line-height-sm);
+	color: var(--color-heading-5);
 }
 
 h6, .h6 {
 	font-size: var(--font-xs);
 	line-height: var(--line-height-xs);
+	color: var(--color-heading-6);
 }
 
 p {

@@ -1,3 +1,5 @@
+/* COLOR SCHEMES */
+
 html {
 
 	/* COLOR TINTS */
@@ -14,6 +16,21 @@ html {
 	--color-white-lightest: #F7F7F7;
 	--color-white-pure: #FFFFFF;
 
+	/* PAGE SETTINGS */
+
+	--background-color: var(--color-white-lightest);
+
+	/* FONTS COLORS */
+
+	--color-heading-1: #00275a;
+	--color-heading-2: #00275a;
+	--color-heading-3: #00275a;
+	--color-heading-4: #0094E7;
+	--color-heading-5: #0094E7;
+	--color-heading-6: #0094E7;
+	--text-light: var(--color-white-lightest); /* fallback */
+	--text-dark: var(--color-black-darkest); /* fallback */
+
 	/* STAR CHART COMPONENT */
 	--star-color: #FFCC00;
 	--star-bg: var(--color-white-lightest);
@@ -21,4 +38,82 @@ html {
 	/* FREE GOODIES */
 
 	--list-bullet-color: #EF0000;
+
+	/* BUTTONS */
+
+	--btn-subcat-bg: #d9ebfd;
+	--btn-subcat-border: #d9ebfd;
+	--btn-subcat-text: var(--color-black-darkest);
+	--btn-subcat-icon: var(--color-black-darkest);
+
+	--btn-subcat-bg-hover: #bae2fc;
+	--btn-subcat-border-hover: #bae2fc;
+	--btn-subcat-text-hover: var(--color-black-darkest);
+	--btn-subcat-icon-hover: var(--color-black-darkest);
+
+	--btn-tab-bg: var(--color-white-lighter);
+	--btn-tab-border: var(--color-white-light);
+	--btn-tab-border-top: var(--color-white-light);
+	--btn-tab-text: var(--color-black-middle);
+	--btn-tab-icon: var(--color-black-middle);
+
+	--btn-tab-bg-hover: var(--color-white-lightish);
+	--btn-tab-border-hover: var(--color-white-light);
+	--btn-tab-border-top-hover: var(--color-white-light);
+	--btn-tab-text-hover: var(--color-black-middle);
+	--btn-tab-icon-hover: var(--color-black-middle);
+
+	--btn-tab-bg-active: var(--color-white-lightest);
+	--btn-tab-border-active: var(--color-white-lightish);
+	--btn-tab-border-top-active: #0094E7;
+	--btn-tab-text-active: var(--color-black-darkest);
+	--btn-tab-icon-active: var(--color-black-darkest);
+
+	--btn-tab-bg-active-hover: var(--color-white-lighter);
+	--btn-tab-border-active-hover: var(--color-white-lightish);
+	--btn-tab-border-top-active-hover: #0094E7;
+	--btn-tab-text-active-hover: var(--color-black-darkest);
+	--btn-tab-icon-active-hover: var(--color-black-darkest);
+
+	--btn-primary-bg: #91c71d;
+	--btn-primary-border: #91c71d;
+	--btn-primary-text: var(--color-white-lightest);
+	--btn-primary-icon: var(--color-white-lightest);
+
+	--btn-primary-bg-hover: #75b32b;
+	--btn-primary-border-hover: #75b32b;
+	--btn-primary-text-hover: var(--color-white-lightest);
+	--btn-primary-icon-hover: var(--color-white-lightest);
+
+	--btn-secondary-bg: #0094E7;
+	--btn-secondary-border: #0094E7;
+	--btn-secondary-text: var(--color-white-lightest);
+	--btn-secondary-icon: var(--color-white-lightest);
+
+	--btn-secondary-bg-hover: #008bd9;
+	--btn-secondary-border-hover: #008bd9;
+	--btn-secondary-text-hover: var(--color-white-lightest);
+	--btn-secondary-icon-hover: var(--color-white-lightest);
+
+	--btn-car-chev-bg: #0094E7;
+	--btn-car-chev-border: #0094E7;
+	--btn-car-chev-text: var(--color-white-lightest);
+	--btn-car-chev-icon: var(--color-white-lightest);
+
+	--btn-car-chev-bg-hover: #2f8dcd;
+	--btn-car-chev-border-hover: #2f8dcd;
+	--btn-car-chev-text-hover: var(--color-white-lightest);
+	--btn-car-chev-icon-hover: var(--color-white-lightest);
+
+	/* PRICE COLORS */
+
+	--color-price-current: #75b32b;
+	--color-price-original: var(--color-black-dark);
+
+	/* DROPDOWN MENU */
+
+	--dd-menu-link: #2f8dcd;
+	--dd-menu-link-hover: #0094E7;
+	--dd-menu-bg: var(--color-white-lightest);
+	--dd-menu-border: var(--color-white-lightish);
 }

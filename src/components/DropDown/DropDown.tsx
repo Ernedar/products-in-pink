@@ -1,27 +1,31 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, useState } from 'react';
 
 import "./DropDown.css";
 
 import { DropDownListItemInterface } from "../../utils/interfaces";
+import classNames from 'classnames';
 
 type dropDownProps = {
+	className?: string;
 	iconPosition?: 'before' | 'after' | 'both',
 	children?: ReactNode,
 	options: Array<DropDownListItemInterface>
 }
 
 const DropDown: FC<dropDownProps> = ({
-	iconPosition = 'after',
+	className = '',
+	iconPosition = 'before',
 	children,
 	options
 }) => {
 
+	const [dropDownToggle, setDropDownToggle] = useState(false);
+
 	return (
-		<button>
-			{(iconPosition === 'before' || iconPosition === 'both') && <span className="dropdown-chevron"></span>}
-			{children && <span>{children}</span>}
-			{(iconPosition === 'after' || iconPosition === 'both') && <span className="dropdown-chevron"></span>}
-			<ul className="dropdown-item-list">
+		<button className={classNames("btn btn-dropdown", className)} onClick={() => setDropDownToggle(!dropDownToggle)}>
+			{(iconPosition === 'before' || iconPosition === 'both') && <span className={classNames("dropdown-chevron", {'rotate': dropDownToggle, 'arrow-offset-right': (children || iconPosition === 'both')})}></span>}
+			{children && <span className="dropdown-content">{children}</span>}
+			<ul className={classNames("dropdown-item-list", {'opened': dropDownToggle})}>
 				{
 					options.map((item, index) => (
 						<li key={index}>
@@ -30,6 +34,7 @@ const DropDown: FC<dropDownProps> = ({
 					))
 				}
 			</ul>
+			{(iconPosition === 'after' || iconPosition === 'both') && <span className={classNames("dropdown-chevron", {'rotate': dropDownToggle, 'arrow-offset-left': (children || iconPosition === 'both')})}></span>}
 		</button>
 	)
 };

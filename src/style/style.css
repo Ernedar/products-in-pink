@@ -16,6 +16,7 @@ html {
 body {
 	font-family: var(--font-family);
 	background-color: var(--background-color);
+	color: var(--text-dark);
 	margin: 0;
 	padding: 0;
   }
@@ -50,6 +51,10 @@ ul {
   padding: 0;
 }
 
+*:focus {
+	outline: none; /* less accessibility, can be sorted after some talks with design */
+}
+
 /* POSITIONS */
 
  /* TEXTS */
@@ -58,6 +63,7 @@ ul {
 	font-size: var(--font-xs);
 	line-height: var(--line-height-xs);
 	font-weight: 700;
+	color: var(--color-heading-1);
 }
 
 .article-desc {
@@ -78,6 +84,7 @@ button {
 	border: 0;
 	background-color: var(--color-white-lightish);
 	cursor: pointer;
+	border-radius: var(--border-rad);
 }
 
 .btn:hover,
@@ -127,10 +134,132 @@ button:hover {
 	padding-right: 1.5rem;
 }
 
-.type-sub-cat {
+.btn-widest.btn-sm {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
 
+.btn-widest.btn-md {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.btn-widest.btn-lg {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.type-sub-cat {
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+	background-color: var(--btn-subcat-bg);
+	border: 0;
+	color: var(--btn-subcat-text);
+	text-decoration: none;
+	box-shadow: 0px 4px 10px -4px var(--color-white-middle);
+}
+
+.type-sub-cat:hover {
+	background-color: var(--btn-subcat-bg-hover);
+	color: var(--btn-subcat-text-hover);
+}
+
+.btn-primary {
+	background-color: var(--btn-primary-bg);
+	border-color:  var(--btn-primary-border);
+	color: var(--btn-primary-text);
+}
+
+.btn-primary > .dropdown-chevron {
+	border-bottom-color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+	background-color: var(--btn-primary-bg-hover);
+	border-color:  var(--btn-primary-border-hover);
+	color: var(--btn-primary-text-hover);
+}
+
+.btn-primary:hover > .dropdown-chevron {
+	border-bottom-color: var(--btn-primary-text-hover);
+}
+
+.btn-secondary {
+	background-color: var(--btn-secondary-bg);
+	border-color:  var(--btn-secondary-border);
+	color: var(--btn-secondary-text);
+}
+
+.btn-secondary > .dropdown-chevron {
+	border-bottom-color: var(--btn-secondary-text);
+}
+
+.btn-secondary:hover {
+	background-color: var(--btn-secondary-bg-hover);
+	border-color:  var(--btn-secondary-border-hover);
+	color: var(--btn-secondary-text-hover);
+}
+
+.btn-secondary:hover > .dropdown-chevron {
+	border-bottom-color: var(--btn-secondary-text-hover);
 }
 
 .type-tab-anchor {
+	background-color: var(--btn-tab-bg);
+	border-style: solid;
+	border-width: var(--btn-tab-border-w);
+	border-color: var(--btn-tab-border);
+	border-top-color: var(--btn-tab-border-top);
+	border-radius: 0;
+	border-bottom: 0;
+	color: var(--btn-tab-text);
+}
 
+.type-tab-anchor:hover {
+	background-color: var(--btn-tab-bg-hover);
+	border-color: var(--btn-tab-border-hover);
+	border-top-color: var(--btn-tab-border-top-hover);
+	color: var(--btn-tab-text-hover);
+}
+
+.type-tab-anchor.active {
+	background-color: var(--btn-tab-bg-active);
+	border-color: var(--btn-tab-border-active);
+	border-top-width: var(--btn-tab-border-top-active-w);
+	border-top-color: var(--btn-tab-border-top-active);
+	color: var(--btn-tab-text-active);
+}
+
+.type-tab-anchor:hover.active {
+	background-color: var(--btn-tab-bg-active-hover);
+	border-color: var(--btn-tab-border-active-hover);
+	border-top-color: var(--btn-tab-border-top-active-hover);
+	color: var(--btn-tab-text-active-hover);
+}
+
+/* for styles when button, input and combinations are in one line next to each other */
+.active-object-group {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.active-object-group button:first-child:not(:only-child),
+.active-object-group .btn:first-child:not(:only-child) {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+.active-object-group button:last-child:not(:only-child),
+.active-object-group .btn:last-child:not(:only-child) {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+
+.active-object-group button:not(:first-child, :last-child, :only-child),
+.active-object-group .btn:not(:first-child, :last-child, :only-child) {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
 }

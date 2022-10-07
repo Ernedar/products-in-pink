@@ -5,6 +5,8 @@ import "./TestPage.css";
 import StarChart from '../StarChart';
 import FreeGoodiesList from '../FreeGoodiesList/FreeGoodiesList';
 import DropDown from '../DropDown';
+import Price from '../Price';
+import Carousel from '../Carousel';
 
 import { BuyDropDownListItems } from "../../utils/utils";
 
@@ -41,9 +43,12 @@ const testPage: FC = () => {
 			</div>
 				<br />
 			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "5px"}}>
-				<button className="btn btn-sm">Button Small</button>
-				<button className="btn btn-md">Button Medium</button>
-				<button className="btn btn-lg">Button Large</button>
+				<button className="btn btn-sm btn-primary">Button Small</button>
+				<button className="btn btn-md btn-primary">Button Medium</button>
+				<button className="btn btn-lg btn-primary">Button Large</button>
+				<button className="btn btn-sm btn-secondary">Button Small</button>
+				<button className="btn btn-md btn-secondary">Button Medium</button>
+				<button className="btn btn-lg btn-secondary">Button Large</button>
 			</div>
 				<br />
 			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "5px"}}>
@@ -52,24 +57,34 @@ const testPage: FC = () => {
 				<button className="btn btn-lg btn-wide">Button Wide Large</button>
 			</div>
 				<br />
-			<div>
-				<a href="/" className="btn type-sub-cat">MacBook</a>
+			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "5px"}}>
+				<button className="btn btn-sm btn-widest">Button Wide Small</button>
+				<button className="btn btn-md btn-widest">Button Wide Medium</button>
+				<button className="btn btn-lg btn-widest">Button Wide Large</button>
 			</div>
-			<button className="btn type-tab-anchor">
-				Nejprodávanější
-			</button>
-			<button className="btn btn-buy">
-				Koupit
-			</button>
-			<DropDown options={BuyDropDownListItems}> Dropdown with label </DropDown>
-			<div className="button-group">
-				<button className="btn btn-buy">
+				<br />
+			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "center"}}>
+				<a href="/" className="btn btn-widest btn-lg type-sub-cat">MacBook</a>
+			</div>
+				<br />
+			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "5px"}}>
+				<button className="btn btn-md btn-wide type-tab-anchor active">
+					Nejprodávanější
+				</button>
+				<button className="btn btn-md btn-wide type-tab-anchor">
+					Nejprodávanější
+				</button>
+			</div>
+				<br />
+			<DropDown className="btn-md btn-wide" iconPosition='both' options={BuyDropDownListItems}> Dropdown with label </DropDown>
+				<br />
+			<div className="active-object-group">
+				<button className="btn btn-md btn-primary">
 					Koupit
 				</button>
-				<button className="btn type-dropdown">
-					Dropdown
-				</button>
+				<DropDown className='btn btn-md btn-primary' options={BuyDropDownListItems}/>
 			</div>
+				<br />
 			<div>
 				<FreeGoodiesList listItems={
 					[
@@ -78,10 +93,12 @@ const testPage: FC = () => {
 					]
 				} bulletTranslation="zdarma" />
 			</div>
-			<div className="price-group">
-				<p className="current-price">1 000 000 Kč</p>
-				<p className="previous-price">1 100 000 Kč</p>
-			</div>
+				<br />
+			<Price currency="Kč" originalPrice={1000000.78} currentPrice={1125000.56}/>
+				<br />
+			<Carousel>
+				<div></div>
+			</Carousel>
 		</div>
 	)
 };
