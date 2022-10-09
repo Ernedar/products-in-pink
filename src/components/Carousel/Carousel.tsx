@@ -88,8 +88,7 @@ const Carousel: FC<carouselProps> = ({
 	}
 
 	useEffect(() => {
-		console.log(currentVisibleProductIndex);
-		console.log(setLineOfIndexes(currentVisibleProductIndex, MockIDs.length));
+		setLineOfIndexes(currentVisibleProductIndex, MockIDs.length);
 	}, [currentVisibleProductIndex, MockIDs.length])
 
 	return (
@@ -99,11 +98,11 @@ const Carousel: FC<carouselProps> = ({
 			</div>
 			<div className="carousel-inner">
 				<div className="carousel-item-line">
-					<CarouselItem />
-					<CarouselItem />
-					<CarouselItem />
-					<CarouselItem />
-					<CarouselItem />
+					<CarouselItem id={MockIDs[setLineOfIndexes(currentVisibleProductIndex, MockIDs.length)[0]].id}/>
+					<CarouselItem id={MockIDs[setLineOfIndexes(currentVisibleProductIndex, MockIDs.length)[1]].id} />
+					<CarouselItem id={MockIDs[setLineOfIndexes(currentVisibleProductIndex, MockIDs.length)[2]].id} />
+					<CarouselItem id={MockIDs[setLineOfIndexes(currentVisibleProductIndex, MockIDs.length)[3]].id} />
+					<CarouselItem id={MockIDs[setLineOfIndexes(currentVisibleProductIndex, MockIDs.length)[4]].id} />
 				</div>
 			</div>
 			<div className="carousel-side right p-1">

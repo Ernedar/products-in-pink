@@ -100,7 +100,7 @@ const TestPage: FC = () => {
 			<Price currency="Kč" originalPrice={1000000.78} currentPrice={1125000.56}/>
 				<br />
 			<SearchResultItem itemAvailability={5}/>
-			<CarouselItem />
+			<CarouselItem id={123456} />
 				<br />
 			<Carousel />
 		</div>
