@@ -1,0 +1,4 @@
+.carousel-item {
+	width: calc(100% / var(--layout-articles));
+	height: auto;
+}

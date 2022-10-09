@@ -14,9 +14,10 @@ html {
 
 	--base-padding: 1rem;
 	--border-rad: 3px;
+	--margin-padding-divider: 0.5rem;
 
 	/* COMPONENT SETTINGS VARIABLES */
-	--star-dim: var(--font-md);
+	--star-dim: calc(var(--font-xl) * 1.5);
 	--star-spacing: 3px;
 
 	/* BUTTON SETTINGS */

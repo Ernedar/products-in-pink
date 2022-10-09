@@ -9,8 +9,11 @@ import Price from '../Price';
 import Carousel from '../Carousel';
 
 import { BuyDropDownListItems } from "../../utils/utils";
+import CarouselItem from '../CarouselItem';
+import SearchResultItem from '../SearchResultItem';
 
-const testPage: FC = () => {
+const TestPage: FC = () => {
+
 	return (
 		<div className="main-container">
 			<div>
@@ -96,11 +99,12 @@ const testPage: FC = () => {
 				<br />
 			<Price currency="Kč" originalPrice={1000000.78} currentPrice={1125000.56}/>
 				<br />
-			<Carousel>
-				<div></div>
-			</Carousel>
+			<SearchResultItem itemAvailability={5}/>
+			<CarouselItem />
+				<br />
+			<Carousel />
 		</div>
 	)
 };
 
-export default testPage;
+export default TestPage;

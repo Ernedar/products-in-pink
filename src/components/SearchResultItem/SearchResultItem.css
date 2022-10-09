@@ -1,0 +1,32 @@
+.search-result-item {
+	width: calc(100% / var(--layout-articles));
+	height: auto;
+}
+
+.search-result-image-wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.positioned-star-chart {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	z-index: 5;
+}
+
+.price-buy-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: auto;
+}
+
+.storage-state {
+	font-size: var(--font-xs);
+	text-align: center;
+	font-weight: 700;
+}

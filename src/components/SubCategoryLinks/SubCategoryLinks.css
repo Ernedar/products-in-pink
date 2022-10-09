@@ -1,0 +1,15 @@
+.page-sub-category-links {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: var(--base-padding);
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+	.page-sub-category-links {
+		  width: 80%;
+	}
+  }

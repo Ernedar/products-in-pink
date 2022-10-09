@@ -13,7 +13,7 @@ type priceProps = {
 const Price: FC<priceProps> = ({
 	className ='',
 	currency = 'CZK',
-	originalPrice = 0,
+	originalPrice,
 	currentPrice
 }) => {
 
