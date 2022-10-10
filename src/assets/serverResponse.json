@@ -1,5 +1,6 @@
 {
-  "breadcrumbs": [
+  "data": {
+    "breadcrumbs": [
     {
       "category": {
         "clientAction": {
@@ -3788,4 +3789,5 @@
   "premiumValidTo": null,
   "premiumRenew": false,
   "serverTime": 1665421662
+}
 }

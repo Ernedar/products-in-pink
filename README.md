@@ -241,6 +241,7 @@ For styling no preprocessor is used. With current state of CSS I personally cons
 ### Additional packages used
 
 - [classnames](https://www.npmjs.com/package/classnames) - support for easy css class switching
+- [json-server]
 - [axios](https://www.npmjs.com/package/react-axios) - REST API connection solution
 
 Consideration was for adding `react-router-dom` package for better management of error pages, but that is not in task description even mentioned so for example error management will be done different way. This case study is considered only one-page solution
@@ -251,13 +252,18 @@ Project is installed with typescript template at its base, for local instalation
 
 In the project directory, you can run:
 
+#### start json-server
+
+`npx json-server --watch ./src/assets/serverResponseNotebooks.json` which will make server on `localhost:3000/data`
+
 #### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3010](http://localhost:3010) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+port was changed by script `"start": "set PORT=3010 && react-scripts start"`
 
 #### `npm test`
 
