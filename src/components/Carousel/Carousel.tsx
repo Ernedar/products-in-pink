@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from 'react';
-import { mockComponent } from 'react-dom/test-utils';
 import CarouselItem from '../CarouselItem';
 
 import "./Carousel.css";
