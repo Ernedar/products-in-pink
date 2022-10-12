@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { ProductItemResponse } from '../utils/interfaces';
 
-/* const baseURL = '' */
+/* const baseURL = 'http://localhost:3000/data' */
 const baseURL = 'https://www.alza.cz/Services/RestService.svc/v2/products';
 
 const apiClient = axios.create({
@@ -50,4 +50,3 @@ const AxiosService = {
 };
 
 export default AxiosService;
-
