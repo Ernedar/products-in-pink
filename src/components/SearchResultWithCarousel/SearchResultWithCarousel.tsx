@@ -9,8 +9,14 @@ import TabFilters from '../TabFilters';
 import SearchResultItem from '../SearchResultItem';
 import { useGetProduct } from '../../hooks/useGetProduct';
 
+import serverResponseJSON from '../../assets/serverResponse.json';
+
 const SearchResultWithCarousel: FC = () => {
   const { loading, data, error } = useGetProduct();
+
+  const dataSet = serverResponseJSON.data;
+
+  console.log(dataSet)
 
   return (
     <div className="main-container">

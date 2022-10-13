@@ -1,5 +1,4 @@
 {
-  "data": {
     "breadcrumbs": [
     {
       "category": {
@@ -3789,5 +3788,4 @@
   "premiumValidTo": null,
   "premiumRenew": false,
   "serverTime": 1665421662
-}
 }
