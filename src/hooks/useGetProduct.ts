@@ -18,6 +18,7 @@ export function useGetProduct() {
         if (canSetState) {
           setLoading(false);
           setData(response);
+          console.log(response);
         }
       })
       .catch((error) => {
