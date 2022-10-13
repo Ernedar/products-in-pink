@@ -1,1 +1,1 @@
-export {default} from './SubCategoryLinks';
+export { SubCategoryLinks } from './SubCategoryLinks';

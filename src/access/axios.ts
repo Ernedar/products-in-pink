@@ -34,7 +34,7 @@ const apiClient = axios.create({
   },
 });
 
-async function responseWithProducts(): Promise<ProductItemResponse> {
+export function getProducts(): Promise<ProductItemResponse> {
   return apiClient.post<ProductItemResponse>('/').then((response) => {
     if (response.data) {
       return Promise.resolve(response.data);
@@ -44,9 +44,3 @@ async function responseWithProducts(): Promise<ProductItemResponse> {
     }
   });
 }
-
-const AxiosService = {
-  responseWithProducts,
-};
-
-export default AxiosService;
