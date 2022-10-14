@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { ProductItemResponse } from '../utils/interfaces';
 
-import { getProducts } from '../access/axios';
+import { getProducts } from '../access/access';
 
 export function useGetProduct() {
   const [loading, setLoading] = useState<boolean>(false);

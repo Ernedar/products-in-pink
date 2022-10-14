@@ -1,0 +1,33 @@
+import axios from axios;
+
+	axios.post(
+		'https://www.alza.cz/Services/RestService.svc/v2/products',
+		{
+			"filterParameters": {
+				"id": 18855843,
+				"isInStockOnly": false,
+				"newsOnly": false,
+				"wearType": 0,
+				"orderBy": 0,
+				"page": 1,
+				"params": [{
+					"tId": 0,
+					"v": []
+				}],
+				"producers": [],
+				"sendPrices": true,
+				"type": "action",
+				"typeId": "",
+				"branchId": ""
+			}
+		},
+		{
+			headers: {
+				'Content-Type': 'application/json',
+				'User-Agent': 'axios/1.1.2',
+				'Accept': '*/*',
+				'Accept-Encoding': 'gzip, deflate, br',
+				'Connection': 'keep-alive'
+			}
+		}
+	)

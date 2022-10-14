@@ -3,37 +3,54 @@ import React, { FC, ReactNode, useState } from 'react';
 import './DropDown.css';
 
 import { DropDownListItemInterface } from '../../utils/interfaces';
+import { IconPositions } from '../../utils/enums';
 import classNames from 'classnames';
 
 type dropDownProps = {
   className?: string;
-  iconPosition?: 'before' | 'after' | 'both';
+  iconPosition?: IconPositions;
   children?: ReactNode;
   options: Array<DropDownListItemInterface>;
 };
 
 const DropDown: FC<dropDownProps> = ({
   className = '',
-  iconPosition = 'before',
+  iconPosition = IconPositions.after,
   children,
   options,
 }) => {
   const [dropDownToggle, setDropDownToggle] = useState(false);
 
+  const arrowLeft =
+    iconPosition === (IconPositions.before || IconPositions.both);
+  const arrowRight =
+    iconPosition === (IconPositions.after || IconPositions.both);
+  const arrowOffset = children || iconPosition === IconPositions.both;
+
   return (
-    <button
-      className={classNames('btn btn-dropdown', className)}
-      onClick={() => setDropDownToggle(!dropDownToggle)}
-    >
-      {(iconPosition === 'before' || iconPosition === 'both') && (
-        <span
-          className={classNames('dropdown-chevron', {
-            rotate: dropDownToggle,
-            'arrow-offset-right': children || iconPosition === 'both',
-          })}
-        ></span>
-      )}
-      {children && <span className="dropdown-content">{children}</span>}
+    <div className={classNames('btn dropdown', className)}>
+      <button
+        className={classNames('btn', className)}
+        onClick={() => setDropDownToggle(!dropDownToggle)}
+      >
+        {arrowLeft && (
+          <span
+            className={classNames('dropdown-chevron', {
+              rotate: dropDownToggle,
+              'arrow-offset-right': arrowOffset,
+            })}
+          ></span>
+        )}
+        {children && <span className="dropdown-content">{children}</span>}
+        {arrowRight && (
+          <span
+            className={classNames('dropdown-chevron', {
+              rotate: dropDownToggle,
+              'arrow-offset-left': arrowOffset,
+            })}
+          ></span>
+        )}
+      </button>
       <ul
         className={classNames('dropdown-item-list', { opened: dropDownToggle })}
       >
@@ -43,16 +60,7 @@ const DropDown: FC<dropDownProps> = ({
           </li>
         ))}
       </ul>
-      {/*vyhodit list a udelat wrapper okolo button, icon position jako enum */}
-      {(iconPosition === 'after' || iconPosition === 'both') && (
-        <span
-          className={classNames('dropdown-chevron', {
-            rotate: dropDownToggle,
-            'arrow-offset-left': children || iconPosition === 'both',
-          })}
-        ></span>
-      )}
-    </button>
+    </div>
   );
 };
 

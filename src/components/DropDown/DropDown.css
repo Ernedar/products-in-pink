@@ -1,3 +1,12 @@
+.dropdown {
+	width: auto;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
 .btn-dropdown {
 	position: relative;
 }
