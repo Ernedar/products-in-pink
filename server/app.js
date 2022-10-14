@@ -1,11 +1,10 @@
-
 import fetch from 'node-fetch';
 import express from 'express';
 import cors from 'cors';
 
 const app = express();
 
-app.use(cors())
+app.use(cors);
 
 const bodyParameters = JSON.stringify(
 	{
@@ -29,20 +28,28 @@ const bodyParameters = JSON.stringify(
 	}
 );
 
-console.log(bodyParameters);
+const requestSettings = {
+	method: 'POST',
+	cache: 'no-cache',
+	headers: {
+		'Content-Type': 'application/json',
+		'Accept': '*/*',
+		'Accept-Encoding': 'gzip, deflate, br, identity',
+		'Connection': 'keep-alive'
+	},
+	body: bodyParameters
+};
 
-app.get('/products', function(request, resolve, next) {
-	fetch('https://www.alza.cz/Services/RestService.svc/v2/products',{
-		method: 'POST',
-		cache: 'no-cache',
-		headers: {
-			'Content-Type': 'application/json',
-			'Accept': '*/*',
-			'Accept-Encoding': 'gzip, deflate, br',
-			'Connection': 'keep-alive'
-		},
-		body: bodyParameters
-	}).then((response) => {resolve.json(response); console.log(response)}).catch((error)=>{resolve.json(error); console.log(error)});
+app.get('/products', function(request, res, next) {
+	fetch('https://www.alza.cz/Services/RestService.svc/v2/products', requestSettings)
+		.then((response) => {
+			console.log(response);
+			res.json(response);
+		})
+		.catch((error)=>{
+			console.log(error);
+			res.send(error);
+		});
 })
 
 app.get('/', function (req, res, next) {

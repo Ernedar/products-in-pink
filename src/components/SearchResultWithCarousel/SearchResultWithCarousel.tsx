@@ -25,12 +25,12 @@ import { BuyDropDownListItems } from '../../utils/utils';
 import serverResponseJSON from '../../assets/serverResponse.json';
 
 const SearchResultWithCarousel: FC = () => {
-  //const { loading, data, error } = useGetProduct();
-
+  const { loading, data, error } = useGetProduct();
+  /*
   const loading = false;
   const error: Error | undefined = undefined;
   const data = serverResponseJSON.data;
-
+*/
   return (
     <div className="main-container">
       <h2 className="mb-4">Notebooky</h2>
@@ -39,13 +39,13 @@ const SearchResultWithCarousel: FC = () => {
 
       {loading && <Loading />}
       {!loading && error && <Errors error={error} />}
-      {!loading && !error && data && <Carousel carouselItemList={data} />}
+      {/*!loading && !error && data && <Carousel carouselItemList={data} />*/}
       <TabFilters linkItemsList={PageTabFilters} />
       {loading && <Loading />}
       {!loading && error && <Errors error={error} />}
       {!loading && !error && data && (
         <div className="search-results-wrapper mb-3 pt-3">
-          {data.map((item, index) => (
+          {/*data.map((item, index) => (
             <SearchResultItem key={index}>
               <p className="article-title mb-1">{item.name}</p>
               <p className="article-desc mt-1 mb-2">{item.spec}</p>
@@ -85,7 +85,7 @@ const SearchResultWithCarousel: FC = () => {
                 {item.avail}
               </p>
             </SearchResultItem>
-          ))}
+              ))*/}
         </div>
       )}
     </div>
