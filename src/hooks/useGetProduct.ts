@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-import { ProductItemResponse } from '../utils/interfaces';
+import { Product } from '../utils/interfaces';
 
 import { getProducts } from '../access/access';
 
 export function useGetProduct() {
   const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<ProductItemResponse>();
+  const [data, setData] = useState<Array<Product>>();
   const [error, setError] = useState<Error>();
 
   useEffect(() => {
@@ -35,4 +35,3 @@ export function useGetProduct() {
 
   return { loading, data, error };
 }
-

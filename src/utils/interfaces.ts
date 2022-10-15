@@ -1,5 +1,3 @@
-import { EmptyStatement } from 'typescript';
-
 export interface DropDownListItemInterface {
   label: string;
   link: string;
