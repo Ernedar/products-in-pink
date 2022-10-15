@@ -4,12 +4,11 @@ import './CarouselItem.css';
 
 type carouselItemProps = {
   children: React.ReactNode;
-  key?: number;
 };
 
-const CarouselItem: FC<carouselItemProps> = ({ children, key }) => {
+const CarouselItem: FC<carouselItemProps> = ({ children }) => {
   return (
-    <div className="carousel-item pl-1 pr-1" key={key}>
+    <div className="carousel-item pl-1 pr-1">
       {children}
     </div>
   );

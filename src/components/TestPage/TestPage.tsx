@@ -9,12 +9,13 @@ import Price from '../Price';
 import Carousel from '../Carousel';
 import ProductImage from '../ProductImage';
 
-import { BuyDropDownListItems } from '../../utils/utils';
+import { BuyDropDownListItems, freeGoodiesListItems } from '../../utils/utils';
 import CarouselItem from '../CarouselItem';
 import SearchResultItem from '../SearchResultItem';
 import { IconPositions } from '../../utils/enums';
 
 const TestPage: FC = () => {
+
   return (
     <div className="main-container">
       <h1 className="mt-5 mb-5">Pre-Programmed Style Composition</h1>
@@ -138,13 +139,11 @@ const TestPage: FC = () => {
       </div>
       <br />
       <div>
-        <FreeGoodiesList
-          listItems={[
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sint pariatur aliquid necessitatibus harum dicta.',
-            'free goodie no.2',
-          ]}
-          bulletTranslation="zdarma"
-        />
+        <FreeGoodiesList bulletTranslation='zdarma'>
+        {freeGoodiesListItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+        </FreeGoodiesList>
       </div>
       <br />
       <Price
@@ -161,13 +160,11 @@ const TestPage: FC = () => {
           pariatur iste consequuntur possimus, accusamus voluptates perspiciatis
           non amet blanditiis sapiente consequatur!
         </p>
-        <FreeGoodiesList
-          listItems={[
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-          ]}
-          bulletTranslation="zdarma"
-        />
+        <FreeGoodiesList bulletTranslation='zdarma'>
+          {freeGoodiesListItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </FreeGoodiesList>
         <div className="search-result-image-wrapper mt-2 mb-2">
           <ProductImage />
           <StarChart rating={2.45} className="positioned-star-chart" />

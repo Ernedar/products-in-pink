@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import CarouselItem from '../CarouselItem';
 
-import { setLineOfIndexes } from '../../utils/utils';
+import { setLineOfIndexes } from '../../utils/handlers';
 
 import Price from '../Price';
 import ProductImage from '../ProductImage';
